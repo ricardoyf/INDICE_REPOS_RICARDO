@@ -3,62 +3,300 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Índice de los repositorios públicos de Ricardo: función, versión, web y descargas.">
+  <meta name="description" content="Repositorios públicos de Ricardo organizados en webs, APK Android, programas Windows y Linux, scripts Python y recursos.">
   <title>Repositorios de Ricardo</title>
   <style>
-    :root{color-scheme:light dark;--bg:#f4f6f8;--card:#fff;--text:#17202a;--muted:#64748b;--line:#dce3ea;--accent:#075985;--tag:#e0f2fe}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}main{width:min(1120px,calc(100% - 28px));margin:auto;padding:36px 0 56px}header{margin-bottom:24px}h1{margin:0 0 6px;font-size:clamp(1.8rem,5vw,2.8rem);line-height:1.1}header p{margin:0;color:var(--muted)}.controls{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}.controls input,.controls select{min-height:44px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--text);padding:0 12px;font:inherit}.controls input{flex:1 1 300px}.controls select{flex:0 1 190px}.count{color:var(--muted);margin:0 0 12px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:14px}.card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:14px;background:var(--card);padding:18px;box-shadow:0 2px 10px #0f172a0a}.card h2{margin:0;font-size:1.17rem;overflow-wrap:anywhere}.meta{display:flex;gap:7px;flex-wrap:wrap;margin:8px 0 12px}.tag{border-radius:999px;background:var(--tag);color:#075985;padding:3px 9px;font-size:.78rem;font-weight:700}.card p{margin:0 0 16px}.links{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}.links a{display:inline-flex;align-items:center;min-height:38px;border:1px solid var(--accent);border-radius:9px;color:var(--accent);padding:6px 10px;text-decoration:none;font-weight:700;font-size:.9rem}.links a.primary{background:var(--accent);color:#fff}.empty{display:none;padding:24px;border:1px dashed var(--line);border-radius:12px;text-align:center;color:var(--muted)}footer{margin-top:28px;color:var(--muted);font-size:.85rem}@media(prefers-color-scheme:dark){:root{--bg:#0f172a;--card:#172033;--text:#edf2f7;--muted:#a9b5c6;--line:#334155;--accent:#7dd3fc;--tag:#12354a}.tag{color:#bae6fd}.links a.primary{color:#082f49;background:#7dd3fc}}
+    :root{color-scheme:light dark;--bg:#f4f6f8;--card:#fff;--text:#17202a;--muted:#526579;--line:#dce3ea;--accent:#075985;--tag:#e0f2fe;--soft:#eaf0f5}
+    *{box-sizing:border-box}[hidden]{display:none!important}html{scroll-behavior:smooth;scroll-padding-top:20px}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}main{width:min(1120px,calc(100% - 32px));margin:auto;padding:40px 0 56px}a{color:var(--accent)}:focus-visible{outline:3px solid var(--accent);outline-offset:4px}.skip{position:absolute;left:16px;top:-80px;padding:10px;background:var(--card);z-index:1}.skip:focus{top:12px}.eyebrow{margin:0 0 10px;color:var(--accent);font-size:.8rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}h1{margin:0 0 12px;font-size:clamp(1.9rem,5vw,3rem);line-height:1.12;letter-spacing:-.035em}header>p:last-child{margin:0;max-width:700px;color:var(--muted);font-size:1.05rem}.categories{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0}.categories a{display:flex;gap:12px;align-items:center;min-height:46px;padding:9px 14px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--text);font-weight:700;text-decoration:none}.categories a:hover{border-color:var(--accent)}.categories span{min-width:26px;text-align:center;border-radius:20px;background:var(--tag);color:var(--accent);font-size:.8rem;padding:2px 6px}.controls{display:flex;align-items:end;gap:12px;flex-wrap:wrap;padding:18px;background:var(--soft);border-radius:14px}.controls label{display:grid;gap:6px;font-size:.85rem;font-weight:700;flex:1 1 300px}.controls label:last-child{flex:0 1 240px}.controls input,.controls select{width:100%;min-height:46px;border:1px solid var(--line);border-radius:9px;background:var(--card);color:var(--text);padding:9px 12px;font:inherit}.count,.hint{color:var(--muted);font-size:.88rem}.count{margin:14px 0 4px}.hint{margin:0 0 28px}.group{margin-top:34px}.group-heading{display:flex;gap:12px;align-items:center;margin-bottom:5px}.group h2{margin:0;font-size:1.45rem;line-height:1.25;letter-spacing:-.02em}.group-count{background:var(--soft);color:var(--muted);border-radius:20px;padding:2px 10px;font-size:.85rem;font-weight:700}.group-intro{margin:0 0 18px;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:14px}.card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:14px;background:var(--card);padding:20px;box-shadow:0 2px 10px #0f172a06}.card h3{margin:0;font-size:1.16rem;overflow-wrap:anywhere}.meta{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin:10px 0 14px}.tag{border-radius:6px;background:var(--tag);color:var(--accent);padding:3px 8px;font-size:.75rem;font-weight:750}.version{color:var(--muted);font-size:.76rem}.card p{margin:0 0 20px}.links{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}.links a{display:inline-flex;align-items:center;justify-content:center;min-height:42px;border:1px solid var(--accent);border-radius:8px;color:var(--accent);padding:7px 10px;text-decoration:none;font-weight:700;font-size:.85rem}.links a:hover{text-decoration:underline}.links a.primary{background:var(--accent);color:#fff}.empty{padding:30px;border:1px dashed var(--line);border-radius:12px;text-align:center}.empty p{color:var(--muted)}button{min-height:44px;border:0;border-radius:8px;padding:9px 16px;background:var(--accent);color:#fff;font:inherit;font-weight:700;cursor:pointer}footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}.hello{margin:16px 0 0;color:var(--muted)}
+    @media(max-width:600px){main{padding-top:28px}.categories{display:grid;grid-template-columns:1fr 1fr;gap:8px}.categories a{justify-content:space-between;padding:9px 10px;font-size:.88rem}.controls{padding:14px}.controls label:last-child{flex-basis:100%}.group h2{font-size:1.3rem}}
+    @media(prefers-color-scheme:dark){:root{--bg:#0f172a;--card:#172033;--text:#edf2f7;--muted:#a9b5c6;--line:#334155;--accent:#7dd3fc;--tag:#12354a;--soft:#1d2b40}.links a.primary,button{color:#082f49}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   </style>
 </head>
 <body>
+<a class="skip" href="#catalogo">Saltar al catálogo</a>
 <main>
   <header>
+    <p class="eyebrow">ricardoyf · catálogo de proyectos</p>
     <h1>Repositorios públicos de Ricardo</h1>
-    <p>Qué hace cada proyecto, su versión actual y sus accesos directos.</p>
+    <p>Encuentra la web, la app Android o el programa para tu ordenador, con su versión y acceso directo.</p>
   </header>
+  <nav class="categories" aria-label="Ir a una categoría">
+    <a href="#webs" data-category="webs">Webs<span>13</span></a>
+    <a href="#android" data-category="android">Android · APK<span>13</span></a>
+    <a href="#escritorio" data-category="escritorio">Escritorio<span>5</span></a>
+    <a href="#recursos" data-category="recursos">Recursos<span>1</span></a>
+  </nav>
   <div class="controls">
-    <input id="search" type="search" placeholder="Buscar por nombre o función…" aria-label="Buscar repositorios">
-    <select id="type" aria-label="Filtrar por tipo">
-      <option value="">Todos los tipos</option><option>Android</option><option>Python</option><option>Web</option><option>Contenido</option>
-    </select>
+    <label for="search">Buscar un proyecto<input id="search" type="search" placeholder="Nombre o función…" autocomplete="off"></label>
+    <label for="type">Sistema o formato<select id="type">
+      <option value="">Todos</option>
+      <option value="web">Web · navegador</option>
+      <option value="android">Android · APK</option>
+      <option value="windows">Windows</option>
+      <option value="linux">Linux · Ubuntu</option>
+      <option value="python">Python</option>
+      <option value="contenido">Contenido y recursos</option>
+    </select></label>
   </div>
-  <p class="count" id="count"></p>
-  <section class="grid" id="grid" aria-label="Repositorios">
-    <article class="card" data-type="Python"><h2>AI-Cut</h2><div class="meta"><span class="tag">Python</span><span class="tag">main actual</span></div><p>Analiza vídeo localmente, aprende de selecciones previas con PyTorch/XGBoost y propone segmentos en CSV compatibles con LosslessCut.</p><div class="links"><a class="primary" href="https://raw.githubusercontent.com/ricardoyf/AI-Cut/main/main.py">Descargar Python</a><a href="https://github.com/ricardoyf/AI-Cut">Código</a></div></article>
-    <article class="card" data-type="Android"><h2>BookReader</h2><div class="meta"><span class="tag">Android</span><span class="tag">v3</span></div><p>Lector offline estilo Kindle para TXT, Markdown y PDF, con paginación, posición por libro, marcas, exportación y TTS.</p><div class="links"><a class="primary" href="https://github.com/ricardoyf/BookReader/releases/download/v3/BookReader-v3.apk">Descargar APK</a><a href="https://github.com/ricardoyf/BookReader">Código</a></div></article>
-    <article class="card" data-type="Web"><h2>CodigoMorse</h2><div class="meta"><span class="tag">Web</span><span class="tag">v1.3</span></div><p>Quiz didáctico para aprender código Morse con cinco niveles, codificación, decodificación, abecedario y audio Web Audio.</p><div class="links"><a class="primary" href="https://ricardoyf.github.io/CodigoMorse/">Abrir web</a><a href="https://github.com/ricardoyf/CodigoMorse">Código</a></div></article>
-    <article class="card" data-type="Android"><h2>CollageAndroid</h2><div class="meta"><span class="tag">Android</span><span class="tag">v1.5</span></div><p>Recorta fotografías para impresión con proporciones predefinidas, rotación fina, guía de tercios, marcadores y continuidad por carpeta.</p><div class="links"><a class="primary" href="https://github.com/ricardoyf/CollageAndroid/raw/refs/tags/v1.5/release-artifacts/v1.5/Collage-v1.5.apk">Descargar APK</a><a href="https://github.com/ricardoyf/CollageAndroid">Código</a></div></article>
-    <article class="card" data-type="Web"><h2>Comidas</h2><div class="meta"><span class="tag">Web</span><span class="tag">main actual</span></div><p>Vista móvil del plan semanal de comidas y cenas, con formato compacto e histórico navegable de semanas anteriores.</p><div class="links"><a class="primary" href="https://ricardoyf.github.io/Comidas/">Abrir web</a><a href="https://github.com/ricardoyf/Comidas">Código</a></div></article>
-    <article class="card" data-type="Web"><h2>EnglishFlashcards</h2><div class="meta"><span class="tag">Web</span><span class="tag">v1.0</span></div><p>Tarjetas interactivas para practicar vocabulario inglés-español directamente en el navegador.</p><div class="links"><a class="primary" href="https://ricardoyf.github.io/EnglishFlashcards/">Abrir web</a><a href="https://github.com/ricardoyf/EnglishFlashcards">Código</a></div></article>
-    <article class="card" data-type="Android"><h2>LinternaTemporizada</h2><div class="meta"><span class="tag">Android</span><span class="tag">v5.0</span></div><p>Controla la linterna con cuenta atrás, presets de tiempo, funcionamiento en segundo plano y encendido diferido.</p><div class="links"><a class="primary" href="https://github.com/ricardoyf/LinternaTemporizada/raw/refs/tags/v5.0/LinternaTemporizada-v5.apk">Descargar APK</a><a href="https://github.com/ricardoyf/LinternaTemporizada">Código</a></div></article>
-    <article class="card" data-type="Android"><h2>MD2Kindle</h2><div class="meta"><span class="tag">Android</span><span class="tag">v3</span></div><p>Convierte Markdown y TXT en EPUB 3 para Kindle, conservando estructura, enlaces, tablas e imágenes, completamente en local.</p><div class="links"><a class="primary" href="https://github.com/ricardoyf/MD2Kindle/raw/refs/tags/v3/MD2Kindle-v3.apk">Descargar APK</a><a href="https://github.com/ricardoyf/MD2Kindle">Código</a></div></article>
-    <article class="card" data-type="Android"><h2>NotasVozLocal</h2><div class="meta"><span class="tag">Android</span><span class="tag">v0.8</span></div><p>Graba notas de voz y las transcribe sin Internet con Vosk; guarda solo el texto y permite editar, copiar, compartir o eliminar.</p><div class="links"><a class="primary" href="https://github.com/ricardoyf/NotasVozLocal/raw/refs/tags/v0.8-ideas-icon/release-artifacts/v0.8-ideas-icon/NotasVozLocal-v0.8-ideas-icon.apk">Descargar APK</a><a href="https://github.com/ricardoyf/NotasVozLocal">Código</a></div></article>
-    <article class="card" data-type="Web"><h2>PaletaPintor</h2><div class="meta"><span class="tag">Web</span><span class="tag">main actual</span></div><p>Aplicación educativa para aprender mezclas RYB mediante niveles, laboratorio de gotas, juegos y recetas de color.</p><div class="links"><a class="primary" href="https://ricardoyf.github.io/PaletaPintor/">Abrir web</a><a href="https://github.com/ricardoyf/PaletaPintor">Código</a></div></article>
-    <article class="card" data-type="Android"><h2>PasteReader</h2><div class="meta"><span class="tag">Android</span><span class="tag">v7</span></div><p>Lee con TTS cualquier texto pegado, resalta la palabra pronunciada y conserva la posición exacta al pausar o girar el móvil.</p><div class="links"><a class="primary" href="https://github.com/ricardoyf/PasteReader/releases/download/v7/PasteReader-v7.apk">Descargar APK</a><a href="https://github.com/ricardoyf/PasteReader">Código</a></div></article>
-    <article class="card" data-type="Android"><h2>Reencuadrador</h2><div class="meta"><span class="tag">Android + Python</span><span class="tag">v6.5</span></div><p>Reencuadra fotos manteniendo orientación EXIF y continuidad por carpeta. Incluye app Android y programa de escritorio Python/Tkinter.</p><div class="links"><a class="primary" href="https://github.com/ricardoyf/Reencuadrador/raw/refs/tags/v6.5/Reencuadrador-v6.5.apk">Descargar APK</a><a href="https://raw.githubusercontent.com/ricardoyf/Reencuadrador/main/Rencuadrar.py">Descargar Python</a><a href="https://github.com/ricardoyf/Reencuadrador">Código</a></div></article>
-    <article class="card" data-type="Android"><h2>ReproLLC</h2><div class="meta"><span class="tag">Android + Python</span><span class="tag">v1</span></div><p>Localiza y reproduce de forma continua cortes LLC/LosslessCut por fechas. Incluye Android y una interfaz para Ubuntu con mpv/NAS.</p><div class="links"><a class="primary" href="https://github.com/ricardoyf/ReproLLC/raw/refs/tags/v1/release-artifacts/v1/reproLLC-v1.apk">Descargar APK</a><a href="https://raw.githubusercontent.com/ricardoyf/ReproLLC/main/accesidorectopora%C3%B1os">Descargar Linux</a><a href="https://github.com/ricardoyf/ReproLLC">Código</a></div></article>
-    <article class="card" data-type="Web"><h2>Roma</h2><div class="meta"><span class="tag">Web</span><span class="tag">main actual</span></div><p>Guía móvil del viaje familiar a Roma 2026 con itinerario, monumentos, mapas, recomendaciones e historias divulgativas.</p><div class="links"><a class="primary" href="https://ricardoyf.github.io/Roma/">Abrir web</a><a href="https://github.com/ricardoyf/Roma">Código</a></div></article>
-    <article class="card" data-type="Web"><h2>SISTEMSOLAR</h2><div class="meta"><span class="tag">Web</span><span class="tag">main actual</span></div><p>Explorador 3D didáctico del sistema solar con escalas, comparaciones, misiones de aprendizaje y cuestionarios.</p><div class="links"><a class="primary" href="https://ricardoyf.github.io/SISTEMSOLAR/">Abrir web</a><a href="https://github.com/ricardoyf/SISTEMSOLAR">Código</a></div></article>
-    <article class="card" data-type="Android"><h2>TTSReader</h2><div class="meta"><span class="tag">Android</span><span class="tag">v20</span></div><p>Lector de TXT y Markdown con TTS, resaltado sincronizado, biblioteca, posición persistente y continuidad de lectura.</p><div class="links"><a class="primary" href="https://github.com/ricardoyf/TTSReader/releases/download/v20/TTSReader-v20-app-debug.apk">Descargar APK</a><a href="https://github.com/ricardoyf/TTSReader">Código</a></div></article>
-    <article class="card" data-type="Android"><h2>TXTReader</h2><div class="meta"><span class="tag">Android</span><span class="tag">v3</span></div><p>Lector Android offline de archivos de texto con navegación, memoria de posición y opciones de lectura adaptadas al móvil.</p><div class="links"><a class="primary" href="https://github.com/ricardoyf/TXTReader/raw/refs/tags/v3/release-artifacts/v3/TXTReader-v3.apk">Descargar APK</a><a href="https://github.com/ricardoyf/TXTReader">Código</a></div></article>
-    <article class="card" data-type="Android"><h2>TankArtillery</h2><div class="meta"><span class="tag">Android</span><span class="tag">v8</span></div><p>Juego de artillería por turnos con terreno procedural, viento, física de proyectiles, dos jugadores o IA.</p><div class="links"><a class="primary" href="https://github.com/ricardoyf/TankArtillery/raw/refs/tags/v8/release-artifacts/v8/TankArtillery-v8.apk">Descargar APK</a><a href="https://github.com/ricardoyf/TankArtillery">Código</a></div></article>
-    <article class="card" data-type="Android"><h2>Vacaciones</h2><div class="meta"><span class="tag">Web + Android</span><span class="tag">v2</span></div><p>Planificador anual de vacaciones, festivos y tardes libres con contadores, exportación PDF y copia/restauración JSON.</p><div class="links"><a class="primary" href="https://github.com/ricardoyf/Vacaciones/raw/refs/tags/v2/VacacionesApp-v2.apk">Descargar APK</a><a href="https://ricardoyf.github.io/Vacaciones/">Abrir web</a><a href="https://github.com/ricardoyf/Vacaciones">Código</a></div></article>
-    <article class="card" data-type="Android"><h2>VideoCortesAndroid</h2><div class="meta"><span class="tag">Android</span><span class="tag">APK v1.12 · main 1.13</span></div><p>Recorta vídeos con flujo tipo LosslessCut, exporta varios segmentos y reproduce cortes LLC filtrados por fechas.</p><div class="links"><a class="primary" href="https://github.com/ricardoyf/VideoCortesAndroid/raw/refs/tags/v1.12/release-artifacts/v1.12/VideoCortes-v1.12.apk">Descargar APK v1.12</a><a href="https://github.com/ricardoyf/VideoCortesAndroid">Código</a></div></article>
-    <article class="card" data-type="Python"><h2>cifrarPDF</h2><div class="meta"><span class="tag">Python · Windows</span><span class="tag">main actual</span></div><p>Cifra archivos PDF localmente con contraseña y AES-256 mediante una interfaz de arrastrar y soltar.</p><div class="links"><a class="primary" href="https://raw.githubusercontent.com/ricardoyf/cifrarPDF/main/pdf_cifrador.py">Descargar Python</a><a href="https://github.com/ricardoyf/cifrarPDF">Código</a></div></article>
-    <article class="card" data-type="Web"><h2>clima</h2><div class="meta"><span class="tag">Web</span><span class="tag">v1.1</span></div><p>Apuntes trilingües sobre climas con mapa mental, tabla, ejercicios, exámenes, tarjetas de repaso e impresión.</p><div class="links"><a class="primary" href="https://ricardoyf.github.io/clima/">Abrir web</a><a href="https://github.com/ricardoyf/clima">Código</a></div></article>
-    <article class="card" data-type="Web"><h2>mi-planificador</h2><div class="meta"><span class="tag">Web</span><span class="tag">v9.1 · release v9</span></div><p>Planificador semanal de comidas con catálogo de platos, recetario Paprika y generación agregada de lista de la compra.</p><div class="links"><a class="primary" href="https://ricardoyf.github.io/mi-planificador/">Abrir web</a><a href="https://github.com/ricardoyf/mi-planificador">Código</a></div></article>
-    <article class="card" data-type="Contenido"><h2>paprika</h2><div class="meta"><span class="tag">Recetas</span><span class="tag">main actual</span></div><p>Archivo público de recetas exportadas de Paprika en HTML, con sus estilos y recursos de presentación.</p><div class="links"><a href="https://github.com/ricardoyf/paprika">Ver repositorio</a></div></article>
-    <article class="card" data-type="Python"><h2>presentador8K</h2><div class="meta"><span class="tag">Python · Linux/Windows</span><span class="tag">v2.4</span></div><p>Presentador aleatorio de fotos del NAS por años, con mosaico 2×2, indexación paralela, historial y parada automática.</p><div class="links"><a class="primary" href="https://raw.githubusercontent.com/ricardoyf/presentador8K/main/presentador_fotos.py">Descargar Python</a><a href="https://github.com/ricardoyf/presentador8K">Código</a></div></article>
-    <article class="card" data-type="Web"><h2>ricardoyf.github.io</h2><div class="meta"><span class="tag">Web</span><span class="tag">v1.4</span></div><p>Portal general que reúne y clasifica páginas y aplicaciones web publicadas por la cuenta.</p><div class="links"><a class="primary" href="https://ricardoyf.github.io/">Abrir web</a><a href="https://github.com/ricardoyf/ricardoyf.github.io">Código</a></div></article>
-    <article class="card" data-type="Web"><h2>ryf</h2><div class="meta"><span class="tag">Web</span><span class="tag">réplica actual</span></div><p>Réplica estática para GitHub Pages de la web clínica de Ricardo Yagüe Facal.</p><div class="links"><a class="primary" href="https://ricardoyf.github.io/ryf/">Abrir web</a><a href="https://github.com/ricardoyf/ryf">Código</a></div></article>
-    <article class="card" data-type="Web"><h2>ryfnueva</h2><div class="meta"><span class="tag">Web</span><span class="tag">home v2.0</span></div><p>Nueva web estática de la clínica, centrada en marca, tradición familiar, atención personal, tratamientos y SEO local.</p><div class="links"><a class="primary" href="https://ricardoyf.github.io/ryfnueva/">Abrir web</a><a href="https://github.com/ricardoyf/ryfnueva">Código</a></div></article>
-    <article class="card" data-type="Web"><h2>vista-e-oido</h2><div class="meta"><span class="tag">Web</span><span class="tag">main actual</span></div><p>Apuntes interactivos trilingües sobre vista y oído con mapa mental, cuatro niveles, práctica y examen.</p><div class="links"><a class="primary" href="https://ricardoyf.github.io/vista-e-oido/">Abrir web</a><a href="https://github.com/ricardoyf/vista-e-oido">Código</a></div></article>
+  <p class="count" id="count" role="status" aria-live="polite">29 proyectos · 32 versiones y accesos</p>
+  <p class="hint">Los proyectos con varias versiones aparecen en cada categoría. Python indica el formato del programa; Windows y Linux, el sistema.</p>
+  <div id="catalogo">
+  <section class="group" id="webs" aria-labelledby="title-webs">
+    <div class="group-heading"><h2 id="title-webs">Webs y aplicaciones online</h2><span class="group-count">13</span></div>
+    <p class="group-intro">Se abren en el navegador, desde el móvil o el ordenador.</p>
+    <div class="grid">
+      <article class="card" data-project="clima" data-filters="web">
+        <h3>clima</h3>
+        <div class="meta"><span class="tag">Web</span><span class="version">v1.1</span></div>
+        <p>Apuntes trilingües sobre climas con mapa mental, tabla, ejercicios, exámenes, tarjetas de repaso e impresión.</p>
+        <div class="links"><a class="primary" href="https://ricardoyf.github.io/clima/">Abrir web</a><a href="https://github.com/ricardoyf/clima">Código</a></div>
+      </article>
+      <article class="card" data-project="CodigoMorse" data-filters="web">
+        <h3>CodigoMorse</h3>
+        <div class="meta"><span class="tag">Web</span><span class="version">v1.3</span></div>
+        <p>Quiz didáctico para aprender código Morse con cinco niveles, codificación, decodificación, abecedario y audio Web Audio.</p>
+        <div class="links"><a class="primary" href="https://ricardoyf.github.io/CodigoMorse/">Abrir web</a><a href="https://github.com/ricardoyf/CodigoMorse">Código</a></div>
+      </article>
+      <article class="card" data-project="Comidas" data-filters="web">
+        <h3>Comidas</h3>
+        <div class="meta"><span class="tag">Web</span><span class="version">main actual</span></div>
+        <p>Vista móvil del plan semanal de comidas y cenas, con formato compacto e histórico navegable de semanas anteriores.</p>
+        <div class="links"><a class="primary" href="https://ricardoyf.github.io/Comidas/">Abrir web</a><a href="https://github.com/ricardoyf/Comidas">Código</a></div>
+      </article>
+      <article class="card" data-project="EnglishFlashcards" data-filters="web">
+        <h3>EnglishFlashcards</h3>
+        <div class="meta"><span class="tag">Web</span><span class="version">v1.0</span></div>
+        <p>Tarjetas interactivas para practicar vocabulario inglés-español directamente en el navegador.</p>
+        <div class="links"><a class="primary" href="https://ricardoyf.github.io/EnglishFlashcards/">Abrir web</a><a href="https://github.com/ricardoyf/EnglishFlashcards">Código</a></div>
+      </article>
+      <article class="card" data-project="mi-planificador" data-filters="web">
+        <h3>mi-planificador</h3>
+        <div class="meta"><span class="tag">Web</span><span class="version">v9.1 · release v9</span></div>
+        <p>Planificador semanal de comidas con catálogo de platos, recetario Paprika y generación agregada de lista de la compra.</p>
+        <div class="links"><a class="primary" href="https://ricardoyf.github.io/mi-planificador/">Abrir web</a><a href="https://github.com/ricardoyf/mi-planificador">Código</a></div>
+      </article>
+      <article class="card" data-project="PaletaPintor" data-filters="web">
+        <h3>PaletaPintor</h3>
+        <div class="meta"><span class="tag">Web</span><span class="version">main actual</span></div>
+        <p>Aplicación educativa para aprender mezclas RYB mediante niveles, laboratorio de gotas, juegos y recetas de color.</p>
+        <div class="links"><a class="primary" href="https://ricardoyf.github.io/PaletaPintor/">Abrir web</a><a href="https://github.com/ricardoyf/PaletaPintor">Código</a></div>
+      </article>
+      <article class="card" data-project="ricardoyf.github.io" data-filters="web">
+        <h3>ricardoyf.github.io</h3>
+        <div class="meta"><span class="tag">Web</span><span class="version">v1.4</span></div>
+        <p>Portal general que reúne y clasifica páginas y aplicaciones web publicadas por la cuenta.</p>
+        <div class="links"><a class="primary" href="https://ricardoyf.github.io/">Abrir web</a><a href="https://github.com/ricardoyf/ricardoyf.github.io">Código</a></div>
+      </article>
+      <article class="card" data-project="Roma" data-filters="web">
+        <h3>Roma</h3>
+        <div class="meta"><span class="tag">Web</span><span class="version">main actual</span></div>
+        <p>Guía móvil del viaje familiar a Roma 2026 con itinerario, monumentos, mapas, recomendaciones e historias divulgativas.</p>
+        <div class="links"><a class="primary" href="https://ricardoyf.github.io/Roma/">Abrir web</a><a href="https://github.com/ricardoyf/Roma">Código</a></div>
+      </article>
+      <article class="card" data-project="ryf" data-filters="web">
+        <h3>ryf</h3>
+        <div class="meta"><span class="tag">Web</span><span class="version">réplica actual</span></div>
+        <p>Réplica estática para GitHub Pages de la web clínica de Ricardo Yagüe Facal.</p>
+        <div class="links"><a class="primary" href="https://ricardoyf.github.io/ryf/">Abrir web</a><a href="https://github.com/ricardoyf/ryf">Código</a></div>
+      </article>
+      <article class="card" data-project="ryfnueva" data-filters="web">
+        <h3>ryfnueva</h3>
+        <div class="meta"><span class="tag">Web</span><span class="version">home v2.0</span></div>
+        <p>Nueva web estática de la clínica, centrada en marca, tradición familiar, atención personal, tratamientos y SEO local.</p>
+        <div class="links"><a class="primary" href="https://ricardoyf.github.io/ryfnueva/">Abrir web</a><a href="https://github.com/ricardoyf/ryfnueva">Código</a></div>
+      </article>
+      <article class="card" data-project="SISTEMSOLAR" data-filters="web">
+        <h3>SISTEMSOLAR</h3>
+        <div class="meta"><span class="tag">Web</span><span class="version">main actual</span></div>
+        <p>Explorador 3D didáctico del sistema solar con escalas, comparaciones, misiones de aprendizaje y cuestionarios.</p>
+        <div class="links"><a class="primary" href="https://ricardoyf.github.io/SISTEMSOLAR/">Abrir web</a><a href="https://github.com/ricardoyf/SISTEMSOLAR">Código</a></div>
+      </article>
+      <article class="card" data-project="Vacaciones" data-filters="web">
+        <h3>Vacaciones</h3>
+        <div class="meta"><span class="tag">Web</span><span class="version">v2</span></div>
+        <p>Planificador anual de vacaciones, festivos y tardes libres con contadores, exportación PDF y copia/restauración JSON.</p>
+        <div class="links"><a href="https://ricardoyf.github.io/Vacaciones/">Abrir web</a><a href="https://github.com/ricardoyf/Vacaciones">Código</a></div>
+      </article>
+      <article class="card" data-project="vista-e-oido" data-filters="web">
+        <h3>vista-e-oido</h3>
+        <div class="meta"><span class="tag">Web</span><span class="version">main actual</span></div>
+        <p>Apuntes interactivos trilingües sobre vista y oído con mapa mental, cuatro niveles, práctica y examen.</p>
+        <div class="links"><a class="primary" href="https://ricardoyf.github.io/vista-e-oido/">Abrir web</a><a href="https://github.com/ricardoyf/vista-e-oido">Código</a></div>
+      </article>
+    </div>
   </section>
-  <p class="empty" id="empty">No hay repositorios que coincidan con el filtro.</p>
-  <footer>Solo se muestran repositorios públicos · Índice v1.0 · Revisado el 29/10/2026</footer>
-  <p>Hola mundo</p>
+  <section class="group" id="android" aria-labelledby="title-android">
+    <div class="group-heading"><h2 id="title-android">Apps Android · APK</h2><span class="group-count">13</span></div>
+    <p class="group-intro">Aplicaciones para instalar en un móvil o una tableta Android.</p>
+    <div class="grid">
+      <article class="card" data-project="BookReader" data-filters="android apk">
+        <h3>BookReader</h3>
+        <div class="meta"><span class="tag">Android</span><span class="tag">APK</span><span class="version">v3</span></div>
+        <p>Lector offline estilo Kindle para TXT, Markdown y PDF, con paginación, posición por libro, marcas, exportación y TTS.</p>
+        <div class="links"><a class="primary" href="https://github.com/ricardoyf/BookReader/releases/download/v3/BookReader-v3.apk">Descargar APK</a><a href="https://github.com/ricardoyf/BookReader">Código</a></div>
+      </article>
+      <article class="card" data-project="CollageAndroid" data-filters="android apk">
+        <h3>CollageAndroid</h3>
+        <div class="meta"><span class="tag">Android</span><span class="tag">APK</span><span class="version">v1.5</span></div>
+        <p>Recorta fotografías para impresión con proporciones predefinidas, rotación fina, guía de tercios, marcadores y continuidad por carpeta.</p>
+        <div class="links"><a class="primary" href="https://github.com/ricardoyf/CollageAndroid/raw/refs/tags/v1.5/release-artifacts/v1.5/Collage-v1.5.apk">Descargar APK</a><a href="https://github.com/ricardoyf/CollageAndroid">Código</a></div>
+      </article>
+      <article class="card" data-project="LinternaTemporizada" data-filters="android apk">
+        <h3>LinternaTemporizada</h3>
+        <div class="meta"><span class="tag">Android</span><span class="tag">APK</span><span class="version">v5.0</span></div>
+        <p>Controla la linterna con cuenta atrás, presets de tiempo, funcionamiento en segundo plano y encendido diferido.</p>
+        <div class="links"><a class="primary" href="https://github.com/ricardoyf/LinternaTemporizada/raw/refs/tags/v5.0/LinternaTemporizada-v5.apk">Descargar APK</a><a href="https://github.com/ricardoyf/LinternaTemporizada">Código</a></div>
+      </article>
+      <article class="card" data-project="MD2Kindle" data-filters="android apk">
+        <h3>MD2Kindle</h3>
+        <div class="meta"><span class="tag">Android</span><span class="tag">APK</span><span class="version">v3</span></div>
+        <p>Convierte Markdown y TXT en EPUB 3 para Kindle, conservando estructura, enlaces, tablas e imágenes, completamente en local.</p>
+        <div class="links"><a class="primary" href="https://github.com/ricardoyf/MD2Kindle/raw/refs/tags/v3/MD2Kindle-v3.apk">Descargar APK</a><a href="https://github.com/ricardoyf/MD2Kindle">Código</a></div>
+      </article>
+      <article class="card" data-project="NotasVozLocal" data-filters="android apk">
+        <h3>NotasVozLocal</h3>
+        <div class="meta"><span class="tag">Android</span><span class="tag">APK</span><span class="version">v0.8</span></div>
+        <p>Graba notas de voz y las transcribe sin Internet con Vosk; guarda solo el texto y permite editar, copiar, compartir o eliminar.</p>
+        <div class="links"><a class="primary" href="https://github.com/ricardoyf/NotasVozLocal/raw/refs/tags/v0.8-ideas-icon/release-artifacts/v0.8-ideas-icon/NotasVozLocal-v0.8-ideas-icon.apk">Descargar APK</a><a href="https://github.com/ricardoyf/NotasVozLocal">Código</a></div>
+      </article>
+      <article class="card" data-project="PasteReader" data-filters="android apk">
+        <h3>PasteReader</h3>
+        <div class="meta"><span class="tag">Android</span><span class="tag">APK</span><span class="version">v7</span></div>
+        <p>Lee con TTS cualquier texto pegado, resalta la palabra pronunciada y conserva la posición exacta al pausar o girar el móvil.</p>
+        <div class="links"><a class="primary" href="https://github.com/ricardoyf/PasteReader/releases/download/v7/PasteReader-v7.apk">Descargar APK</a><a href="https://github.com/ricardoyf/PasteReader">Código</a></div>
+      </article>
+      <article class="card" data-project="Reencuadrador" data-filters="android apk">
+        <h3>Reencuadrador</h3>
+        <div class="meta"><span class="tag">Android</span><span class="tag">APK</span><span class="version">v6.5</span></div>
+        <p>Reencuadra fotos en Android, respeta la orientación EXIF y permite continuar el trabajo por carpetas.</p>
+        <div class="links"><a class="primary" href="https://github.com/ricardoyf/Reencuadrador/raw/refs/tags/v6.5/Reencuadrador-v6.5.apk">Descargar APK</a><a href="https://github.com/ricardoyf/Reencuadrador">Código</a></div>
+      </article>
+      <article class="card" data-project="ReproLLC" data-filters="android apk">
+        <h3>ReproLLC</h3>
+        <div class="meta"><span class="tag">Android</span><span class="tag">APK</span><span class="version">v1</span></div>
+        <p>Localiza y reproduce de forma continua cortes LLC/LosslessCut por fechas desde el móvil o la tableta.</p>
+        <div class="links"><a class="primary" href="https://github.com/ricardoyf/ReproLLC/raw/refs/tags/v1/release-artifacts/v1/reproLLC-v1.apk">Descargar APK</a><a href="https://github.com/ricardoyf/ReproLLC">Código</a></div>
+      </article>
+      <article class="card" data-project="TankArtillery" data-filters="android apk">
+        <h3>TankArtillery</h3>
+        <div class="meta"><span class="tag">Android</span><span class="tag">APK</span><span class="version">v8</span></div>
+        <p>Juego de artillería por turnos con terreno procedural, viento, física de proyectiles, dos jugadores o IA.</p>
+        <div class="links"><a class="primary" href="https://github.com/ricardoyf/TankArtillery/raw/refs/tags/v8/release-artifacts/v8/TankArtillery-v8.apk">Descargar APK</a><a href="https://github.com/ricardoyf/TankArtillery">Código</a></div>
+      </article>
+      <article class="card" data-project="TTSReader" data-filters="android apk">
+        <h3>TTSReader</h3>
+        <div class="meta"><span class="tag">Android</span><span class="tag">APK</span><span class="version">v20</span></div>
+        <p>Lector de TXT y Markdown con TTS, resaltado sincronizado, biblioteca, posición persistente y continuidad de lectura.</p>
+        <div class="links"><a class="primary" href="https://github.com/ricardoyf/TTSReader/releases/download/v20/TTSReader-v20-app-debug.apk">Descargar APK</a><a href="https://github.com/ricardoyf/TTSReader">Código</a></div>
+      </article>
+      <article class="card" data-project="TXTReader" data-filters="android apk">
+        <h3>TXTReader</h3>
+        <div class="meta"><span class="tag">Android</span><span class="tag">APK</span><span class="version">v3</span></div>
+        <p>Lector Android offline de archivos de texto con navegación, memoria de posición y opciones de lectura adaptadas al móvil.</p>
+        <div class="links"><a class="primary" href="https://github.com/ricardoyf/TXTReader/raw/refs/tags/v3/release-artifacts/v3/TXTReader-v3.apk">Descargar APK</a><a href="https://github.com/ricardoyf/TXTReader">Código</a></div>
+      </article>
+      <article class="card" data-project="Vacaciones" data-filters="android apk">
+        <h3>Vacaciones</h3>
+        <div class="meta"><span class="tag">Android</span><span class="tag">APK</span><span class="version">v2</span></div>
+        <p>Planificador anual de vacaciones, festivos y tardes libres con contadores, exportación PDF y copia/restauración JSON.</p>
+        <div class="links"><a class="primary" href="https://github.com/ricardoyf/Vacaciones/raw/refs/tags/v2/VacacionesApp-v2.apk">Descargar APK</a><a href="https://github.com/ricardoyf/Vacaciones">Código</a></div>
+      </article>
+      <article class="card" data-project="VideoCortesAndroid" data-filters="android apk">
+        <h3>VideoCortesAndroid</h3>
+        <div class="meta"><span class="tag">Android</span><span class="tag">APK</span><span class="version">APK v1.12 · main 1.13</span></div>
+        <p>Recorta vídeos con flujo tipo LosslessCut, exporta varios segmentos y reproduce cortes LLC filtrados por fechas.</p>
+        <div class="links"><a class="primary" href="https://github.com/ricardoyf/VideoCortesAndroid/raw/refs/tags/v1.12/release-artifacts/v1.12/VideoCortes-v1.12.apk">Descargar APK v1.12</a><a href="https://github.com/ricardoyf/VideoCortesAndroid">Código</a></div>
+      </article>
+    </div>
+  </section>
+  <section class="group" id="escritorio" aria-labelledby="title-escritorio">
+    <div class="group-heading"><h2 id="title-escritorio">Programas de escritorio</h2><span class="group-count">5</span></div>
+    <p class="group-intro">Herramientas para ordenador. Las etiquetas indican el sistema y cuáles se ejecutan con Python.</p>
+    <div class="grid">
+      <article class="card" data-project="AI-Cut" data-filters="python windows">
+        <h3>AI-Cut</h3>
+        <div class="meta"><span class="tag">Windows</span><span class="tag">Python</span><span class="version">main actual</span></div>
+        <p>Analiza vídeos localmente, aprende de selecciones previas con XGBoost y propone segmentos en CSV para LosslessCut.</p>
+        <div class="links"><a class="primary" href="https://raw.githubusercontent.com/ricardoyf/AI-Cut/main/main.py">Descargar Python</a><a href="https://github.com/ricardoyf/AI-Cut">Código</a></div>
+      </article>
+      <article class="card" data-project="cifrarPDF" data-filters="python windows">
+        <h3>cifrarPDF</h3>
+        <div class="meta"><span class="tag">Windows</span><span class="tag">Python</span><span class="version">main actual</span></div>
+        <p>Cifra archivos PDF localmente con contraseña y AES-256 mediante una interfaz de arrastrar y soltar.</p>
+        <div class="links"><a class="primary" href="https://raw.githubusercontent.com/ricardoyf/cifrarPDF/main/pdf_cifrador.py">Descargar Python</a><a href="https://github.com/ricardoyf/cifrarPDF">Código</a></div>
+      </article>
+      <article class="card" data-project="presentador8K" data-filters="python windows linux ubuntu">
+        <h3>presentador8K</h3>
+        <div class="meta"><span class="tag">Windows</span><span class="tag">Linux (Ubuntu)</span><span class="tag">Python</span><span class="version">v2.4</span></div>
+        <p>Presentador aleatorio de fotos del NAS por años, con mosaico 2×2, indexación paralela, historial y parada automática.</p>
+        <div class="links"><a class="primary" href="https://raw.githubusercontent.com/ricardoyf/presentador8K/main/presentador_fotos.py">Descargar Python</a><a href="https://github.com/ricardoyf/presentador8K/blob/main/README.md">Instalación</a><a href="https://github.com/ricardoyf/presentador8K">Código</a></div>
+      </article>
+      <article class="card" data-project="Reencuadrador" data-filters="python">
+        <h3>Reencuadrador</h3>
+        <div class="meta"><span class="tag">Python</span><span class="tag">Tkinter</span><span class="version">script de escritorio</span></div>
+        <p>Reencuadra fotografías desde una interfaz Python/Tkinter, respeta la orientación EXIF y guarda copias con sufijo _ENC.</p>
+        <div class="links"><a href="https://raw.githubusercontent.com/ricardoyf/Reencuadrador/main/Rencuadrar.py">Descargar Python</a><a href="https://github.com/ricardoyf/Reencuadrador">Código</a></div>
+      </article>
+      <article class="card" data-project="ReproLLC" data-filters="python windows linux ubuntu">
+        <h3>ReproLLC</h3>
+        <div class="meta"><span class="tag">Linux (Ubuntu)</span><span class="tag">Windows</span><span class="tag">Python</span><span class="version">main actual</span></div>
+        <p>Reproduce cortes LLC/LosslessCut en el ordenador: interfaz por años y meses en Ubuntu, y script para Windows con mpv/mpv.net.</p>
+        <div class="links"><a href="https://raw.githubusercontent.com/ricardoyf/ReproLLC/main/accesidorectopora%C3%B1os">Descargar Linux</a><a href="https://github.com/ricardoyf/ReproLLC/blob/main/README.md">Guía Windows / Linux</a><a href="https://github.com/ricardoyf/ReproLLC">Código</a></div>
+      </article>
+    </div>
+  </section>
+  <section class="group" id="recursos" aria-labelledby="title-recursos">
+    <div class="group-heading"><h2 id="title-recursos">Contenido y recursos</h2><span class="group-count">1</span></div>
+    <p class="group-intro">Colecciones y archivos para consultar.</p>
+    <div class="grid">
+      <article class="card" data-project="paprika" data-filters="contenido">
+        <h3>paprika</h3>
+        <div class="meta"><span class="tag">Recetas</span><span class="tag">HTML</span><span class="version">main actual</span></div>
+        <p>Archivo público de recetas exportadas de Paprika en HTML, con sus estilos y recursos de presentación.</p>
+        <div class="links"><a href="https://github.com/ricardoyf/paprika">Ver repositorio</a></div>
+      </article>
+    </div>
+  </section>
+  </div>
+  <div class="empty" id="empty" hidden><strong>No se han encontrado proyectos</strong><p>Prueba con otro nombre o cambia el sistema.</p><button id="reset" type="button">Mostrar todos</button></div>
+  <footer>Solo se muestran repositorios públicos · Índice v1.1 · Revisado el 29/10/2026</footer>
+  <p class="hello">Hola mundo</p>
 </main>
 <script>
-const cards=[...document.querySelectorAll('.card')],search=document.querySelector('#search'),type=document.querySelector('#type'),count=document.querySelector('#count'),empty=document.querySelector('#empty');function filter(){const q=search.value.trim().toLocaleLowerCase('es'),t=type.value;let n=0;cards.forEach(c=>{const show=(!q||c.textContent.toLocaleLowerCase('es').includes(q))&&(!t||c.dataset.type.includes(t));c.hidden=!show;if(show)n++});count.textContent=`${n} repositorio${n===1?'':'s'} visible${n===1?'':'s'}`;empty.style.display=n?'none':'block'}search.addEventListener('input',filter);type.addEventListener('change',filter);filter();
+const cards = [...document.querySelectorAll('.card')];
+const groups = [...document.querySelectorAll('.group')];
+const search = document.querySelector('#search');
+const type = document.querySelector('#type');
+const count = document.querySelector('#count');
+const empty = document.querySelector('#empty');
+const normalize = text => text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('es');
+function filter() {
+  const query = normalize(search.value.trim());
+  const selected = type.value;
+  const visibleProjects = new Set();
+  let visibleCards = 0;
+  cards.forEach(card => {
+    const matches = (!query || normalize(card.textContent).includes(query)) && (!selected || card.dataset.filters.split(' ').includes(selected));
+    card.hidden = !matches;
+    if (matches) { visibleProjects.add(card.dataset.project); visibleCards++; }
+  });
+  groups.forEach(group => {
+    const total = [...group.querySelectorAll('.card')].filter(card => !card.hidden).length;
+    group.hidden = total === 0;
+    group.querySelector('.group-count').textContent = total;
+    const link = document.querySelector('[data-category="' + group.id + '"]');
+    link.hidden = total === 0;
+    link.querySelector('span').textContent = total;
+  });
+  const total = visibleProjects.size;
+  count.textContent = total + ' proyecto' + (total === 1 ? '' : 's') + ' · ' + visibleCards + (visibleCards === 1 ? ' versión o acceso' : ' versiones y accesos');
+  empty.hidden = visibleCards > 0;
+}
+search.addEventListener('input', filter);
+type.addEventListener('change', filter);
+document.querySelector('#reset').addEventListener('click', () => { search.value = ''; type.value = ''; filter(); search.focus(); });
+filter();
 </script>
 </body>
 </html>
