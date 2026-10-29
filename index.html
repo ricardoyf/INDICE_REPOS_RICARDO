@@ -55,6 +55,7 @@
   </section>
   <p class="empty" id="empty">No hay repositorios que coincidan con el filtro.</p>
   <footer>Solo se muestran repositorios públicos · Índice v1.0 · Revisado el 29/10/2026</footer>
+  <p>Hola mundo</p>
 </main>
 <script>
 const cards=[...document.querySelectorAll('.card')],search=document.querySelector('#search'),type=document.querySelector('#type'),count=document.querySelector('#count'),empty=document.querySelector('#empty');function filter(){const q=search.value.trim().toLocaleLowerCase('es'),t=type.value;let n=0;cards.forEach(c=>{const show=(!q||c.textContent.toLocaleLowerCase('es').includes(q))&&(!t||c.dataset.type.includes(t));c.hidden=!show;if(show)n++});count.textContent=`${n} repositorio${n===1?'':'s'} visible${n===1?'':'s'}`;empty.style.display=n?'none':'block'}search.addEventListener('input',filter);type.addEventListener('change',filter);filter();
