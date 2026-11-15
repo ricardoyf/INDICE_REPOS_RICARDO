@@ -10,4 +10,4 @@
 
 Web: <https://ricardoyf.github.io/INDICE_REPOS_RICARDO/>
 
-Versión del índice: **v1.2** (13/11/2026).
+Versión del índice: **v1.3** (15/11/2026).
